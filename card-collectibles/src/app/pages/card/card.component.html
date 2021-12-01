@@ -1,0 +1,72 @@
+<div *ngIf="setFlag == false; else elseBlock">
+    <div style="width: 50%; margin: 100px 0px 0px 300px; padding: 70px; box-shadow: 1px 1px 1px 1px;">
+    <form [formGroup]="cardDetailsForm">
+        <h1>Create a new card</h1>
+        <div fxLayout="row">
+          <div fxFlexOffset="10" fxFlex="70">
+            <mat-form-field class="example-full-width" style="width: 100%">
+              <mat-label>Name</mat-label>
+              <input formControlName='name' matInput placeholder="User Name">
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row">
+            <div fxFlexOffset="10" fxFlex="70">
+              <mat-form-field class="example-full-width" style="width: 100%">
+                <mat-label>Owner</mat-label>
+                <input formControlName='owner' matInput placeholder="Owner Name">
+              </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row">
+            <div fxFlexOffset="10" fxFlex="70">
+              <mat-form-field class="example-full-width" style="width: 100%">
+                <mat-label>Buy price</mat-label>
+                <input formControlName='buy' matInput placeholder="Buy Price">
+              </mat-form-field>
+            </div>
+          </div>
+    </form>
+    <div fxLayout="row">
+        <div fxFlexOffset="10" fxFlex="70" fxLayoutAlign="end">
+        <button color="accent" mat-raised-button (click)="submit()">Create</button>
+        </div>
+    </div> 
+  </div> 
+</div>
+<ng-template #elseBlock>
+    <div style="width: 50%; margin: 100px 0px 0px 300px; padding: 70px; box-shadow: 1px 1px 1px 1px;">
+    <form [formGroup]="cardDetailsForm">
+        <h1>Update card</h1>
+        <div fxLayout="row">
+          <div fxFlexOffset="10" fxFlex="70">
+            <mat-form-field class="example-full-width" style="width: 100%">
+              <mat-label>Name</mat-label>
+              <input formControlName='username' matInput placeholder="User Name">
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row">
+            <div fxFlexOffset="10" fxFlex="70">
+              <mat-form-field class="example-full-width" style="width: 100%">
+                <mat-label>Owner</mat-label>
+                <input formControlName='owner' matInput placeholder="Owner Name">
+              </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row">
+            <div fxFlexOffset="10" fxFlex="70">
+              <mat-form-field class="example-full-width" style="width: 100%">
+                <mat-label>Buy price</mat-label>
+                <input formControlName='buy' matInput placeholder="Buy Price">
+              </mat-form-field>
+            </div>
+          </div>
+    </form>
+    <div fxLayout="row">
+        <div fxFlexOffset="10" fxFlex="70" fxLayoutAlign="end">
+        <button color="accent" mat-raised-button (click)="submit()">Update</button>
+        </div>
+    </div> 
+  </div> 
+</ng-template>

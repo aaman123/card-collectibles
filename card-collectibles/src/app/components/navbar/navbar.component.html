@@ -1,0 +1,27 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+    
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <div fxHide.gt-xs>
+                <button mat-icon-button>
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <div>
+                <a routerLink="/">Card Collectibles</a>
+            </div>
+            <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+                <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+                    <li>
+                        <a routerLink="/">All Collectibles</a>
+                    </li>
+                    <li>
+                        <a (click)="generateRandomId()">Create</a>
+                    </li>
+                </ul>
+            </div>
+          </mat-toolbar>
+    </mat-sidenav-content>
+</mat-sidenav-container>
